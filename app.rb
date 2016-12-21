@@ -7,6 +7,10 @@ get '/' do
 end
 
 post '/' do
-		@resultado= "Correcta"
+		@respuesta = params["opcion"]
+		if @respuesta == "Cinco"
+			@resultado= "Correcta"
+		else @resultado = "Incorrecta"
+		end
 		erb :preguntados
 end

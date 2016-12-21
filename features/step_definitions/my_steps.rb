@@ -7,7 +7,6 @@ Then(/^veo "(.*?)"$/) do |titulo|
 end
 
 Given(/^selecciono opcion "(.*?)"$/) do |respuesta|
-#  select(respuesta, options => "opcion")
 	choose "Cinco"
 	click_button("Contestar")
 end
