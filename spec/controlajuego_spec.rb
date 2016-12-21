@@ -2,28 +2,24 @@ require_relative "../lib/partida.rb"
 
 describe "ver preguntas" do
 
-	it "saluda al jugador" do
-		"hola jugador"
-	end
-
 	it "muestra una pregunta" do
 		partida = Partida.new
-		partida.muestraPregunta(1) == "¿Cuantos dedos tiene una mano?"
+		partida.muestraPregunta(1).should == "¿Cuantos dedos tiene una mano?"
 		
 	end
 
 	it "muestra las respuestas de una pregunta" do
 		partida = Partida.new
-		partida.muestraRespuestas(1) == ["Cuatro", "Cinco"]
+		partida.muestraRespuestas(1).should == ["Cuatro", "Cinco"]
 	end
 
 	it "muestra la segunda pregunta" do
 		partida = Partida.new
-		partida.muestraPregunta(2) == "¿De que color es el cielo?"
+		partida.muestraPregunta(2).should == "¿De que color es el cielo?"
 	end 
 
-	#it "obtiene respuesta correcta de segunda pregunta" do
-	##	partida = Partida.new
-	#	partida.muestraRespuestaCorrecta = 2
-	#end 
+	it "obtiene respuesta correcta de la tercera pregunta" do
+		partida = Partida.new
+		partida.muestraRespuestaCorrecta(3).should == 1
+	end 
 end

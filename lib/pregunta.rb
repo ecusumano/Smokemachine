@@ -13,7 +13,7 @@ class Pregunta
 		@respuestas
 	end
 
-	def get _respuestaCorrecta
+	def get_respuestaCorrecta
 		@respuestaCorrecta
 	end
 	
