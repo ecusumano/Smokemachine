@@ -9,15 +9,20 @@ class Partida
 		@pregunta1.set_respuestas (["Cuatro", "Cinco"])
 		@pregunta1.set_respuestaCorrecta (2)
 
-		@preguntas = [@pregunta1]
+		@pregunta2 = Pregunta.new
+		@pregunta2.set_pregunta("¿De que color es el cielo?")
+		@pregunta2.set_respuestas (["Rojo", "Celeste"])
+		@pregunta2.set_respuestaCorrecta (2)
+
+		@preguntas = [@pregunta1, @pregunta2]
 		
 	end 
 
-	def muestraPregunta 
-		@preguntas[0].get_pregunta
+	def muestraPregunta nroPregunta
+		@preguntas[nroPregunta-1].get_pregunta
 	end
 
-	def muestraRespuestas
-		@preguntas[0].get_respuestas
+	def muestraRespuestas nroPregunta
+		@preguntas[nroPregunta-1].get_respuestas
 	end
 end	

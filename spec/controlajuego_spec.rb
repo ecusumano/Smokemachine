@@ -6,14 +6,24 @@ describe "ver preguntas" do
 		"hola jugador"
 	end
 
-	it "muestra la primera pregunta" do
+	it "muestra una pregunta" do
 		partida = Partida.new
-		partida.muestraPregunta == "¿Cuantos dedos tiene una mano?"
+		partida.muestraPregunta(1) == "¿Cuantos dedos tiene una mano?"
 		
 	end
 
 	it "muestra las respuestas de una pregunta" do
 		partida = Partida.new
-		partida.muestraRespuestas == ["Cuatro", "Cinco"]
+		partida.muestraRespuestas(1) == ["Cuatro", "Cinco"]
 	end
+
+	it "muestra la segunda pregunta" do
+		partida = Partida.new
+		partida.muestraPregunta(2) == "¿De que color es el cielo?"
+	end 
+
+	#it "obtiene respuesta correcta de segunda pregunta" do
+	##	partida = Partida.new
+	#	partida.muestraRespuestaCorrecta = 2
+	#end 
 end
