@@ -58,6 +58,14 @@ class Partida
 
 	end 
 
+	def get_es_ultima_pregunta
+		if @proxima_pregunta == @preguntas.length
+			return true
+		else
+			return false
+		end
+	end
+
 	def set_ultima_pregunta
 		@proxima_pregunta = @preguntas.length
 	end

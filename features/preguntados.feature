@@ -27,8 +27,25 @@ Scenario: elijo una respuesta y confirmo
 	Then veo "Correcta"
 	And veo "10"
 
-
-
+Scenario: finaliza el juego 
+	Given voy a la pantalla principal
+	And inicio el juego
+  When selecciono "Cinco"
+  And continuo
+	And selecciono "Celeste"
+  And continuo
+	And selecciono "Felino"
+  And continuo
+	And selecciono "Azul y Amarillo"
+  And continuo
+	And selecciono "Japón"
+  And continuo
+	And selecciono "Bolivia"
+  And continuo
+	And selecciono "Cuatro"
+	And continuo
+	And selecciono "15"
+	Then veo "Felicitaciones"
 
 
 

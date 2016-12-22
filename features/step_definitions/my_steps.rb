@@ -18,6 +18,13 @@ Given(/^para la pregunta "(.*?)"$/) do |pregunta|
 end
 
 When(/^selecciono "(.*?)"$/) do |respuesta|
-  choose "Cinco"
+  choose respuesta
 	click_button("Contestar")
 end
+
+When(/^continuo$/) do
+  click_button("Nueva Pregunta")
+end
+
+
+

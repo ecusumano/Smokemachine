@@ -1,9 +1,12 @@
 <table width=500px align=center style="text-align:center;"><tr><td>
 	<h1 style="color:blue" >Preguntados</h1>
 	<br/>
+	
 	<form action="/" method="get">
-				<p>Fin del juego!</p>
-				<input type="submit" name="reiniciar_juego" value= "Nueva Partida" align=center/> 
+		<p>Fin del juego!</p>
+		<p>Felicitaciones, has obtenido: <span style="border: 1px solid #a53333;border-radius:5px;background-color:#f6d4d4; padding:0 15px;margin:auto;text-align:center;">  <%= @@puntaje %> puntos</span></p>
+		<br/><br/>
+		<input type="submit" name="reiniciar_juego" value= "Nueva Partida" align=center/> 
 	</form>
 	<br/>
 </td></tr></table>

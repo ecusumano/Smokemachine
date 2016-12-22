@@ -28,5 +28,10 @@ post '/evaluar_respuesta' do
 					@resultado= "Incorrecta"
 					@@puntaje -=5		
 		end
-		erb :resultado
+		@es_ultima= @@partida.get_es_ultima_pregunta()
+		if @es_ultima == true
+			erb :fin_del_juego
+		else
+			erb :resultado
+		end
 end
