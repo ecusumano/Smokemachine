@@ -56,7 +56,7 @@ class Partida
 		@respuestaCorrecta = @preguntas[@proxima_pregunta-1].get_respuestas[@indice-1]
 	end
 
-	def obtieneImagen nroPregunta
-		@preguntas[nroPregunta-1].get_imagen
+	def obtieneImagen 
+		@preguntas[@proxima_pregunta-1].get_imagen
 	end
 end	

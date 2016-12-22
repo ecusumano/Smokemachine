@@ -12,6 +12,7 @@ post '/preguntados' do
 		@pregunta = @@partida.muestraPregunta()
 		if @pregunta != "Fin del juego"
 			@respuestas = @@partida.muestraRespuestas()
+			@imagen = @@partida.obtieneImagen()
 			erb :preguntados
 		else
 			erb :fin_del_juego

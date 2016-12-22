@@ -4,11 +4,11 @@
 	<br/>
 	<form action="/evaluar_respuesta" method="post">
 	<table align=center style="text-align:center;">
-		<tr style="background-color:red;"><td colspan=2><p>Pregunta:<%= @pregunta %></p></td><td></td></tr>
-		<tr style="text-align:left;background-color:gray;"><td><br/>
+		<tr><td style="background-color:#c32121;color:#FFF;" colspan=2><p>Pregunta:<%= @pregunta %></p></td><td></td></tr>
+		<tr style="text-align:left;background-color:#c1d7e0;"><td><br/>
 				<% @respuestas.each do |button| %>
 				<input type="radio" name="opcion" value= "<%= button %>" id="<%= button %>"><%= button %><br/>
-				<% end %><br/></td><td><img src="imagenes/mano.png" width=250px"></td></tr>
+				<% end %><br/></td><td><img src="imagenes/<%= @imagen %>.png" width=250px"></td></tr>
 		<tr><td colspan=2><input type="submit" value= "Contestar" /> 
 	</td><td></td></tr></table>
 </form>
