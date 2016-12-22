@@ -30,25 +30,32 @@ class Partida
 		@pregunta4.set_imagen("boca")
 
 		@preguntas = [@pregunta1, @pregunta2, @pregunta3, @pregunta4]
-		
+		@proxima_pregunta = 0
+
 	end 
 
-	def muestraPregunta nroPregunta
-			if nroPregunta > @preguntas.length
+	def set_ultima_pregunta
+		@proxima_pregunta = @preguntas.length
+	end
+
+	def muestraPregunta 
+			@proxima_pregunta += 1
+			if @proxima_pregunta > @preguntas.length
 				return "Fin del juego"
 			else
-				return @preguntas[nroPregunta-1].get_pregunta
+				return @preguntas[@proxima_pregunta-1].get_pregunta
 			end		
 	end
 
-	def muestraRespuestas nroPregunta
-		@preguntas[nroPregunta-1].get_respuestas
+	def muestraRespuestas 
+		@preguntas[@proxima_pregunta-1].get_respuestas
 	end
 
-	def muestraRespuestaCorrecta nroPregunta
-		@indice = @preguntas[nroPregunta-1].get_respuestaCorrecta
-		@respuestaCorrecta = @preguntas[nroPregunta-1].get_respuestas[@indice-1]
+	def muestraRespuestaCorrecta 
+		@indice = @preguntas[@proxima_pregunta-1].get_respuestaCorrecta
+		@respuestaCorrecta = @preguntas[@proxima_pregunta-1].get_respuestas[@indice-1]
 	end
+
 	def obtieneImagen nroPregunta
 		@preguntas[nroPregunta-1].get_imagen
 	end
