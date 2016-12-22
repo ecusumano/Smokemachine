@@ -1,10 +1,12 @@
 <table width=500px align=center style="text-align:center;"><tr><td>
 	<h1 style="color:blue">Preguntados</h1>
-
+<table style="border: 1px solid #a53333;border-radius:5px;background-color:#f6d4d4; padding:0 15px;margin:auto;text-align:center;">
+<tr><td>Puntaje: <%= @@puntaje %></td></tr>
+</table>
 	<br/>
 	<form action="/evaluar_respuesta" method="post">
 	<table align=center style="text-align:center;">
-		<tr><td style="background-color:#c32121;color:#FFF;" colspan=2><p>Pregunta:<%= @pregunta %></p></td><td></td></tr>
+		<tr><td style="background-color:#c32121;color:#FFF;" colspan=2><p style="padding:0 15px;">Pregunta: <%= @pregunta %></p></td><td></td><td></td></tr>
 		<tr style="text-align:left;background-color:#c1d7e0;"><td><br/>
 				<% @respuestas.each do |button| %>
 				<input type="radio" name="opcion" value= "<%= button %>" id="<%= button %>"><%= button %><br/>
@@ -13,4 +15,7 @@
 	</td><td></td></tr></table>
 </form>
 	</td></tr></table>
+
+
+
 
