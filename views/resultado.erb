@@ -1,9 +1,14 @@
 <h1>Preguntados</h1>
 
 <br/>
+
 <form action="/preguntados" method="post">
 			<p>Respuesta:<%= @resultado %></p>
 			<input type="submit" value= "Nueva Pregunta" /> 
 </form>
+<table style="border: 1px solid red;">
+<tr><td>Puntaje</td></tr>
+<tr><td><%= @@puntaje %></td></tr>
+</table>
 <br/>
 

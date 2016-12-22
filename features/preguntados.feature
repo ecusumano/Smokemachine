@@ -20,6 +20,14 @@ Scenario: elijo una respuesta y confirmo
   When selecciono "Cinco"
 	Then veo "Correcta"
 
+Scenario: elijo una respuesta y confirmo
+	Given voy a la pantalla principal
+	And inicio el juego
+  When selecciono "Cinco"
+	Then veo "Correcta"
+	And veo "10"
+
+
 
 
 
