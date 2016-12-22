@@ -12,8 +12,12 @@ end
 post '/preguntados' do	
 		@@prox_pregunta += 1
 		@pregunta = @@partida.muestraPregunta(@@prox_pregunta)
-		@respuestas = @@partida.muestraRespuestas(@@prox_pregunta)
-		erb :preguntados
+		if @pregunta != "Fin del juego"
+			@respuestas = @@partida.muestraRespuestas(@@prox_pregunta)
+			erb :preguntados
+		else
+			erb :fin_del_juego
+		end
 end
 
 post '/evaluar_respuesta' do

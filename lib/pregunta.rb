@@ -6,7 +6,11 @@ class Pregunta
 	end
 
 	def get_pregunta
-		@pregunta
+		if (@pregunta.nil? || @pregunta.empty?)
+			@pregunta = "Fin del juego"
+		else
+			@pregunta
+		end
 	end
 
 	def get_respuestas

@@ -30,7 +30,11 @@ class Partida
 	end 
 
 	def muestraPregunta nroPregunta
-		@preguntas[nroPregunta-1].get_pregunta
+			if nroPregunta > @preguntas.length
+				return "Fin del juego"
+			else
+				return @preguntas[nroPregunta-1].get_pregunta
+			end		
 	end
 
 	def muestraRespuestas nroPregunta

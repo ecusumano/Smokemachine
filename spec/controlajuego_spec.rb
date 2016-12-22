@@ -27,4 +27,9 @@ describe "ver preguntas" do
 		partida = Partida.new
 		partida.muestraRespuestaCorrecta(2).should == "Celeste"
 	end 
+
+		it "no obtiene preguntas" do
+		partida = Partida.new
+		partida.muestraPregunta(5).should == "Fin del juego"
+	end 
 end
