@@ -29,7 +29,31 @@ class Partida
 		@pregunta4.set_respuestaCorrecta (2)
 		@pregunta4.set_imagen("boca")
 
-		@preguntas = [@pregunta1, @pregunta2, @pregunta3, @pregunta4]
+		@pregunta5 = Pregunta.new
+		@pregunta5.set_pregunta("¿A qué país pertenece la bandera?")
+		@pregunta5.set_respuestas (["Bangladesh","Japón", "Vietnam"])
+		@pregunta5.set_respuestaCorrecta (2)
+		@pregunta5.set_imagen("japon")
+
+		@pregunta6 = Pregunta.new
+		@pregunta6.set_pregunta("¿En qué país está la Laguna Verde?")
+		@pregunta6.set_respuestas (["Bangladesh","Japón", "Bolivia"])
+		@pregunta6.set_respuestaCorrecta (3)
+		@pregunta6.set_imagen("bolivia")
+
+		@pregunta7 = Pregunta.new
+		@pregunta7.set_pregunta("¿Cuántas finales del mundo jugó la Selección Argentina de fútbol?")
+		@pregunta7.set_respuestas (["Dos","Tres", "Cinco", "Cuatro"])
+		@pregunta7.set_respuestaCorrecta (4)
+		@pregunta7.set_imagen("argentina")
+
+		@pregunta8 = Pregunta.new
+		@pregunta8.set_pregunta("¿Cuántos jugadores componen un equipo de rugby?")
+		@pregunta8.set_respuestas (["15","11", "20", "10"])
+		@pregunta8.set_respuestaCorrecta (1)
+		@pregunta8.set_imagen("rugby")
+
+		@preguntas = [@pregunta1, @pregunta2, @pregunta3, @pregunta4, @pregunta5, @pregunta6, @pregunta7, @pregunta8]
 		@proxima_pregunta = 0
 
 	end 

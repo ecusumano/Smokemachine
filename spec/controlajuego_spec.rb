@@ -40,6 +40,10 @@ describe "ver preguntas" do
 	end 
 	it "obtiene la cuarta imagen" do
 		partida = Partida.new
+		partida.muestraPregunta()
+		partida.muestraPregunta()
+		partida.muestraPregunta()
+		partida.muestraPregunta()
 		partida.obtieneImagen.should == "boca"
 	end 
 end
