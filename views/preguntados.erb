@@ -1,12 +1,13 @@
 <h1>Preguntados</h1>
 
 <br/>
-
-<form action="/" method="post">
+<form action="/evaluar_respuesta" method="post">
 			<p>Cuantos dedos tiene una mano?</p><br/>
+			<br/>
 			<input type="radio" name="opcion" value= "Cuatro" id="Cuatro">Cuatro<br/>
 			<input type="radio" name="opcion" value= "Cinco" id="Cinco">Cinco<br/>
 			<input type="submit" value= "Contestar" /> 
 </form>
 <br/>
 <p>Respuesta:<%= @resultado %></p>
+

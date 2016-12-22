@@ -6,7 +6,7 @@ get '/' do
     erb :preguntados
 end
 
-post '/' do
+post '/evaluar_respuesta' do
 		@respuesta = params["opcion"]
 		if @respuesta == "Cinco"
 			@resultado= "Correcta"
