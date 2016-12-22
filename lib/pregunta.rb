@@ -3,14 +3,11 @@ class Pregunta
 		@pregunta = ""
 		@respuestas = ""
 		@respuestaCorrecta = 0
+		@imagen = ""
 	end
 
 	def get_pregunta
-		if (@pregunta.nil? || @pregunta.empty?)
-			@pregunta = "Fin del juego"
-		else
-			@pregunta
-		end
+		@pregunta
 	end
 
 	def get_respuestas
@@ -19,6 +16,10 @@ class Pregunta
 
 	def get_respuestaCorrecta
 		@respuestaCorrecta
+	end
+
+	def get_imagen
+		@imagen
 	end
 	
 	def set_pregunta pregunta
@@ -33,6 +34,8 @@ class Pregunta
 		@respuestaCorrecta = respuestaCorrecta
 	end 
 
-
+	def set_imagen imagen
+		@imagen = imagen
+	end
 
 end

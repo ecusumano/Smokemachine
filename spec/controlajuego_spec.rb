@@ -32,4 +32,8 @@ describe "ver preguntas" do
 		partida = Partida.new
 		partida.muestraPregunta(5).should == "Fin del juego"
 	end 
+	it "obtiene la cuarta imagen" do
+		partida = Partida.new
+		partida.obtieneImagen(4).should == "boca"
+	end 
 end

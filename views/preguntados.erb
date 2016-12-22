@@ -1,13 +1,16 @@
-<h1>Preguntados</h1>
+<table width=500px align=center style="text-align:center;"><tr><td>
+	<h1 style="color:blue">Preguntados</h1>
 
-<br/>
-<form action="/evaluar_respuesta" method="post">
-			<p>Pregunta:<%= @pregunta %></p><br/>
-			<br/>
-			<% @respuestas.each do |button| %>
-			<input type="radio" name="opcion" value= "<%= button %>" id="<%= button %>"><%= button %><br/>
-			<% end %>
-			<input type="submit" value= "Contestar" /> 
+	<br/>
+	<form action="/evaluar_respuesta" method="post">
+	<table align=center style="text-align:center;">
+		<tr style="background-color:red;"><td colspan=2><p>Pregunta:<%= @pregunta %></p></td><td></td></tr>
+		<tr style="text-align:left;background-color:gray;"><td><br/>
+				<% @respuestas.each do |button| %>
+				<input type="radio" name="opcion" value= "<%= button %>" id="<%= button %>"><%= button %><br/>
+				<% end %><br/></td><td><img src="imagenes/mano.png" width=250px"></td></tr>
+		<tr><td colspan=2><input type="submit" value= "Contestar" /> 
+	</td><td></td></tr></table>
 </form>
-
+	</td></tr></table>
 
