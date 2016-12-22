@@ -12,7 +12,7 @@ class Partida
 
 		@pregunta2 = Pregunta.new
 		@pregunta2.set_pregunta("¿De que color es el cielo?")
-		@pregunta2.set_respuestas (["Rojo", "Celeste"])
+		@pregunta2.set_respuestas (["Rojo", "Celeste", "Verde"])
 		@pregunta2.set_respuestaCorrecta (2)
 
 		@pregunta3 = Pregunta.new
@@ -38,6 +38,7 @@ class Partida
 	end
 
 	def muestraRespuestaCorrecta nroPregunta
-		@preguntas[nroPregunta-1].get_respuestaCorrecta
+		@indice = @preguntas[nroPregunta-1].get_respuestaCorrecta
+		@respuestaCorrecta = @preguntas[nroPregunta-1].get_respuestas[@indice-1]
 	end
 end	

@@ -18,8 +18,8 @@ describe "ver preguntas" do
 		partida.muestraPregunta(2).should == "¿De que color es el cielo?"
 	end 
 
-	it "obtiene respuesta correcta de la tercera pregunta" do
+	it "obtiene respuesta correcta de la segunda pregunta" do
 		partida = Partida.new
-		partida.muestraRespuestaCorrecta(3).should == 1
+		partida.muestraRespuestaCorrecta(2).should == "Celeste"
 	end 
 end
