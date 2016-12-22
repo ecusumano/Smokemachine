@@ -1,16 +1,23 @@
-Given(/^voy a la pantalla$/) do
+
+Given(/^voy a la pantalla principal$/) do
   visit '/'
 end
 
-Then(/^veo "(.*?)"$/) do |titulo|
-  last_response.body.should =~ /#{titulo}/m
+Then(/^veo "(.*?)"$/) do |texto|
+  last_response.body.should =~ /#{texto}/m
 end
 
-Given(/^selecciono opcion "(.*?)"$/) do |respuesta|
-	choose "Cinco"
+
+Given(/^inicio el juego$/) do
+  click_button("Iniciar Juego")
+end
+
+
+Given(/^para la pregunta "(.*?)"$/) do |pregunta|
+  last_response.body.should =~ /#{pregunta}/m
+end
+
+When(/^selecciono "(.*?)"$/) do |respuesta|
+  choose "Cinco"
 	click_button("Contestar")
 end
-
-
-
-

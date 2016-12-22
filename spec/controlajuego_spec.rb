@@ -13,6 +13,11 @@ describe "ver preguntas" do
 		partida.muestraRespuestas(1).should == ["Cuatro", "Cinco"]
 	end
 
+	it "obtiene respuesta correcta de la primera pregunta" do
+		partida = Partida.new
+		partida.muestraRespuestaCorrecta(1).should == "Cinco"
+	end 
+
 	it "muestra la segunda pregunta" do
 		partida = Partida.new
 		partida.muestraPregunta(2).should == "¿De que color es el cielo?"
